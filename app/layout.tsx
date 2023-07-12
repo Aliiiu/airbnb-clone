@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 	icons: {
 		icon: {
 			url: '/airbnb.svg',
-			type: 'image/svg+xml',
+			type: 'image/svg',
 		},
-		shortcut: { url: '/airbib.svg', type: 'image/svg+xml' },
+		shortcut: { url: '/airbib.svg', type: 'image/svg' },
 	},
 };
 

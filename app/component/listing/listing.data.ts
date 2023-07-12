@@ -1,4 +1,4 @@
-import { TListItem } from '../component/listing/ListingCard';
+import { TListItem } from './ListingCard';
 
 export const listing: TListItem[] = [
 	{

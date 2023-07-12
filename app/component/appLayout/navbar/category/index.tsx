@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Container } from '../../Container';
-import { categories } from '../../../../constant/categories.data';
+import { categories } from './categories.data';
 import CategoryBox from './CategoryBox';
 import { PiSlidersHorizontalBold } from 'react-icons/pi';
 import { SliderCarousel } from '@/app/component/widget/Carousel/SliderComp';

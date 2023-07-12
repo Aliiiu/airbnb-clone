@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { Container } from './component/appLayout/Container';
 import ListingCard from './component/listing/ListingCard';
-import { listing } from './constant/listing.data';
+import { listing } from './component/listing/listing.data';
 import { useEffect, useState } from 'react';
 import EmptyState from './component/listing/EmptyState';
 import { HiOutlineMap } from 'react-icons/hi';
