@@ -54,8 +54,6 @@ const CategoryBox: FC<TCategoryBoxProps> = ({
 			{ skipNull: true }
 		);
 
-		console.log(url);
-
 		router.push(url);
 	}, [label, router, params]);
 
@@ -68,7 +66,7 @@ const CategoryBox: FC<TCategoryBoxProps> = ({
       `}
 		>
 			{imgSrc ? <IconImage src={imgSrc} /> : Icon ? <Icon size={26} /> : ''}
-			<span className='font-medium text-xs'>{label}</span>
+			<span className='font-medium truncate text-xs'>{label}</span>
 		</div>
 	);
 };

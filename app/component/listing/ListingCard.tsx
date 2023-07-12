@@ -3,6 +3,7 @@
 import React, { FC } from 'react';
 import Image, { ImageProps } from 'next/image';
 import HeartButton from '../widget/button/Heartbutton';
+import { AiTwotoneStar } from 'react-icons/ai';
 
 export type TListItem = {
 	imageSrc: ImageProps['src'];
@@ -14,6 +15,8 @@ export type TListItem = {
 	price: string;
 	rating: string;
 	reservation: string;
+	longitude: number;
+	latitude: number;
 };
 
 type TListingCard = {
@@ -22,45 +25,31 @@ type TListingCard = {
 
 const ListingCard: FC<TListingCard> = ({ data }) => {
 	return (
-		<div
-			// onClick={() => router.push(`/listings/${data.id}`)}
-			className='col-span-1 cursor-pointer group'
-		>
+		<div className='col-span-1 cursor-pointer group'>
 			<div className='flex flex-col gap-1 w-full'>
-				<div
-					className='
-            aspect-square 
-            w-full 
-            relative 
-            overflow-hidden 
-            rounded-xl
-          '
-				>
-					<Image
-						fill
-						className='
-              object-cover 
-              h-full 
-              w-full 
-              group-hover:scale-110 
-              transition
-            '
-						src={data.imageSrc}
-						alt='Listing'
-					/>
-					<div
-						className='
-            absolute
-            top-3
-            right-3
-          '
-					>
-						<HeartButton listingId={data.id} />
+				{
+					<div className='aspect-square w-full relative overflow-hidden rounded-xl'>
+						<Image
+							fill
+							className='object-cover h-full w-full group-hover:scale-110 transition'
+							src={data.imageSrc}
+							alt='Listing'
+						/>
+						<div className='absolute top-3 right-3'>
+							<HeartButton listingId={data.id} />
+						</div>
+					</div>
+				}
+				<div className='flex justify-between'>
+					<span className='font-medium'>
+						{data?.label}, {data?.country}
+					</span>
+					<div className='flex items-center gap-1'>
+						<span className='font-medium'>{data.rating}</span>
+						<AiTwotoneStar />
 					</div>
 				</div>
-				<span className='font-semibold'>
-					{data?.label}, {data?.country}
-				</span>
+
 				<span className='font-light truncate text-sm capitalize text-neutral-500'>
 					{data.host}
 				</span>

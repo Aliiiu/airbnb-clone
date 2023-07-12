@@ -8,7 +8,7 @@ const Search = () => {
 	return (
 		<div className='border w-full md:w-auto py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer'>
 			<div className='flex items-center sm:divide-x justify-between'>
-				<div className='flex items-center gap-4 px-6'>
+				<div className='flex items-center gap-4 px-4 lg:px-6'>
 					<BiSearch size={18} />
 					<div className='flex flex-col'>
 						<span className='text-sm font-semibold'>Anywhere</span>
@@ -19,7 +19,7 @@ const Search = () => {
 						</div>
 					</div>
 				</div>
-				<span className='text-sm font-semibold px-6 hidden sm:block'>
+				<span className='text-sm font-semibold px-4 lg:px-6 hidden sm:block'>
 					Any Week
 				</span>
 				<div className='pl-6 pr-2 flex items-center gap-3'>

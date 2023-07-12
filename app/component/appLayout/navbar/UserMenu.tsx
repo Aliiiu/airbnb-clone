@@ -43,7 +43,7 @@ const UserMenu = () => {
 					>
 						<Menu.Items
 							className={
-								'absolute right-0 w-56 mt-2 bg-white shadow-lg rounded-2xl divide-y divide-gray-200'
+								'absolute top-10 right-0 w-56 mt-2 z-50 bg-white shadow-lg rounded-2xl divide-y divide-gray-200'
 							}
 						>
 							<div className='px-4 py-4 flex flex-col gap-5 items-start'>

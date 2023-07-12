@@ -7,6 +7,7 @@ import { FaAirbnb } from 'react-icons/fa';
 import { FaRegMessage } from 'react-icons/fa6';
 import { CgProfile } from 'react-icons/cg';
 import { Container } from './Container';
+import { IoIosArrowUp } from 'react-icons/io';
 
 const Footer = () => {
 	return (
@@ -35,7 +36,7 @@ const Footer = () => {
 					</a>
 				</div>
 				<div className='hidden md:flex justify-between items-center'>
-					<div className='flex items-center gap-2'>
+					<div className='flex flex-wrap items-center gap-2'>
 						<small className='text-sm'>© 2023 Airbnb, Inc.</small>
 						<div className='flex-none w-[2px] h-[2px] bg-gray-800 rounded-full'></div>
 						<small className=' hover:underline text-sm cursor-pointer'>
@@ -54,13 +55,16 @@ const Footer = () => {
 							Your Privacy Choice
 						</small>
 					</div>
-					<div className='flex items-center gap-4'>
+					<div className='flex flex-wrap items-center gap-4'>
 						<div className='flex items-center gap-1'>
 							<TbWorld size={22} className='hidden sm:inline-flex' />
 							<small className='font-medium text-sm'>English(US)</small>
 						</div>
 						<small className='font-medium text-sm'>$ USD</small>
-						<small className='font-medium text-sm'>Support & resources</small>
+						<div className='flex items-center gap-1'>
+							<small className='font-medium text-sm'>Support & resources</small>
+							<IoIosArrowUp />
+						</div>
 					</div>
 				</div>
 			</Container>
