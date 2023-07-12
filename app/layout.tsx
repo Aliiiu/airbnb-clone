@@ -7,12 +7,20 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Nunito } from 'next/font/google';
 import Footer from './component/appLayout/Footer';
+import { Metadata } from 'next';
 
 const font = Nunito({ subsets: ['latin'] });
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: 'Vacation Homes & Condo Rental - Airbnb - Airbnb',
 	description: 'Airbnb your home',
+	icons: {
+		icon: {
+			url: '/airbnb.svg',
+			type: 'image/svg+xml',
+		},
+		shortcut: { url: '/airbib.svg', type: 'image/svg+xml' },
+	},
 };
 
 export default function RootLayout({
@@ -22,9 +30,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<Head>
-				<link rel='icon' href='/airbnb.svg' />
-			</Head>
 			<body className={font.className}>
 				<LoginModal />
 				<NavBar />
